@@ -1,6 +1,6 @@
 package pets_amok;
 
-public class OrganicDog extends VirtualPets {
+public class OrganicDog extends Organic {
     int dogCage;
 
     public OrganicDog(String name, String animal, String type, int dogCage) {
@@ -17,12 +17,12 @@ public class OrganicDog extends VirtualPets {
     }
 
     public void cleanDogCage() {
-        setDogCage(100);
+        setDogCage(105);
     }
 
     public void walkingDog() {
         setHappiness(getHappiness() + 5);
-        setDogCage(getDogCage() - 2);
+        setDogCage(getDogCage() - 3);
     }
 
     @Override

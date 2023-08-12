@@ -5,9 +5,6 @@ public class Robotic extends VirtualPets {
 
     public Robotic(String name, String animal, String type) {
         super(name, animal, type);
-        setHunger(0);
-        setThirst(0);
-        setBoredom(0);
         this.oilLevel = 100;
 
     }
@@ -20,9 +17,15 @@ public class Robotic extends VirtualPets {
         this.oilLevel = oilLevel;
     }
 
-    public void OilRoboticPets() {
+    public void oilRoboticPets() {
 
         setOilLevel(105);
+
+    }
+
+    @Override
+    public void play() {
+        setOilLevel(getOilLevel() - 10);
 
     }
 
@@ -30,9 +33,6 @@ public class Robotic extends VirtualPets {
     public void tick() {
         setOilLevel(getOilLevel() - 5);
         setDay(getDay() + 1);
-        setHunger(0);
-        setThirst(0);
-        setBoredom(0);
 
     }
 

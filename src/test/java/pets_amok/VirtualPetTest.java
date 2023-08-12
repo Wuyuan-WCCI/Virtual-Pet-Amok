@@ -1,36 +1,34 @@
 package pets_amok;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 import org.junit.jupiter.api.Test;
 
 public class VirtualPetTest {
-    @Test
-    void appHasAGreeting() {
-        assertTrue(true, "app should have a greeting");
-    }
 
     @Test
     public void testOrganicDogCleanDogCage() {
         OrganicDog organicDog = new OrganicDog("Buddy", "Dog", "Organic", 50);
         organicDog.cleanDogCage();
-        assertEquals(100, organicDog.getDogCage());
+        assertEquals(105, organicDog.getDogCage());
     }
 
+    @Test
     public void testSetAndGetHappiness() {
-        VirtualPets pet = new VirtualPets("Nmido", "Dog", "Organic");
+        Organic pet = new Organic("Nmido", "Dog", "Organic");
 
         pet.setHappiness(70);
 
         assertEquals(70, pet.getHappiness());
     }
 
+    @Test
     public void testOilRoboticDog() {
         Robotic roboticDog = new Robotic("JoboDog", "Dog", "Robotic");
         int oilLevel = roboticDog.getOilLevel();
 
-        roboticDog.OilRoboticPets();
+        roboticDog.oilRoboticPets();
         assertEquals(oilLevel + 5, roboticDog.getOilLevel());
     }
 }
